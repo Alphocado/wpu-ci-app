@@ -14,16 +14,18 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th>1</th>
-            <td>Udin</td>
-            <td>emial@gmail.com</td>
-            <td>
-              <a href="" class="badge badge-warning">detail</a>
-              <a href="" class="badge badge-success">edit</a>
-              <a href="" class="badge badge-danger">delete</a>
-            </td>
-          </tr>
+          <?php foreach ($peoples as $p) : ?>
+            <tr>
+              <th><?= $p['id'] ?></th>
+              <td><?= $p['name'] ?></td>
+              <td><?= $p['email'] ?></td>
+              <td>
+                <a href="" class="badge badge-warning">detail</a>
+                <a href="" class="badge badge-success">edit</a>
+                <a href="" class="badge badge-danger">delete</a>
+              </td>
+            </tr>
+          <?php endforeach; ?>
         </tbody>
       </table>
 
