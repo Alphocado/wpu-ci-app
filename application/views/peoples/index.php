@@ -16,7 +16,7 @@
         <tbody>
           <?php foreach ($peoples as $p) : ?>
             <tr>
-              <th><?= $p['id'] ?></th>
+              <th><?= ++$start ?></th>
               <td><?= $p['name'] ?></td>
               <td><?= $p['email'] ?></td>
               <td>
@@ -28,7 +28,7 @@
           <?php endforeach; ?>
         </tbody>
       </table>
-
+      <?= $this->pagination->create_links() ?>
     </div>
   </div>
 </div>
